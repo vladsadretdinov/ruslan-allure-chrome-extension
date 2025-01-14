@@ -1,0 +1,30 @@
+{
+    "name": "Ruslan allure scenarios parser",
+    "version": "1.0",
+    "description": "Ruslan allure scenarios parser",
+    "manifest_version": 3,
+     "icons": {
+       "48": "favicon.png"
+     },
+    "action": {
+      "default_title": "Ruslan allure scenarios parser",
+      "default_popup": "index.html",
+      "default_icon": "favicon.png"
+    },
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self';",
+      "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
+    },
+    "host_permissions": ["<all_urls>"],
+    "content_scripts": [
+      {
+        "matches": [
+          "<all_urls>"
+        ],
+        "js": [
+          "content.js"
+        ],
+        "all_frames": true
+      }
+    ]
+}
