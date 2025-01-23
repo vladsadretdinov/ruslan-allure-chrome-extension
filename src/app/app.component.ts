@@ -69,7 +69,7 @@ export class AppComponent {
     const layout = scenarioSection?.querySelector('.TestCaseScenarioLayout');
 
     // Находим все элементы с классом TreeElement_node внутри этой секции
-    const nodes = layout?.querySelectorAll('.TreeElement_node');
+    const nodes = layout?.querySelectorAll('.TreeElement__node');
 
     // Проходимся по всем найденным узлам
     return Array.from(nodes || []).map((node) => {
